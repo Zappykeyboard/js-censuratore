@@ -12,8 +12,8 @@ console.log(theText);
 function censor(text, words) {
   if (words && text) {
     //trasformo il testo e le parole da censurare in array;
-    var textArray = text.split(" ");
-    var wordsArray = words.split(" ");
+    var textArray = text.toUpperCase().split(" ");
+    var wordsArray = words.toUpperCase().split(" ");
 
     var badWordsSum = 0;
 
@@ -25,10 +25,10 @@ function censor(text, words) {
       }
     }
 
-    var result = textArray.join(" ");
+    var result = textArray.join(" ").toLowerCase();
 
     return ("Parole censurate: " + badWordsSum + " su " + textArray.length + "\n" + result);
-    
+
   } else {
 
     return "errore nell'input";
