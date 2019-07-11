@@ -28,8 +28,11 @@ function censor(text, words) {
     var result = textArray.join(" ");
 
     return ("Parole censurate: " + badWordsSum + " su " + textArray.length + "\n" + result);
+    
   } else {
+
     return "errore nell'input";
+
   }
 
 
